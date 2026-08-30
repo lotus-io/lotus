@@ -1,4 +1,4 @@
-name = "Catppuccin Mocha"
+name = "Catppuccin Mocha Unofficial"
 author = "Pocco"
 version = 1
 description = "An unofficial Catppuccin Mocha adaptation for TUI applications."
@@ -42,7 +42,7 @@ green = "#A6E3A1"
 cyan = "#94E2D5"
 red = "#F38BA8"
 magenta = "#F5C2E7"
-brown = "#F9E2AF"
+brown = "#F9E2AF" // dark_yellow
 light_gray = "#BAC2DE"
 
 dark_gray = "#6C7086"
@@ -51,7 +51,7 @@ light_green = "#A6E3A1"
 light_cyan = "#94E2D5"
 light_red = "#F38BA8"
 light_magenta = "#CBA6F7"
-light_yellow = "#F9E2AF"
+yellow = "#F9E2AF" // light_yellow
 white = "#CDD6F4"
 
 # ------ Extended Palette
