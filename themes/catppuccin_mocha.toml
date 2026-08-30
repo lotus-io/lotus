@@ -1,7 +1,7 @@
 name = "Catppuccin Mocha"
 author = "Pocco"
 version = 1
-description = "A dark theme with warm pastel colors."
+description = "An unofficial Catppuccin Mocha adaptation for TUI applications."
 
 [colors]
 // ------ Base
@@ -35,24 +35,25 @@ info = "#89DCEB";
 // ------ Links
 link = "#89B4FA";
 
-// ------ Palette
-red = "#F38BA8";
-orange = "#FAB387";
-yellow = "#F9E2AF";
-green = "#A6E3A1";
-cyan = "#94E2D5";
-blue = "#89B4FA";
-purple = "#CBA6F7";
-pink = "#F5C2E7";
+# ------ ANSI Palette
+black = "#45475A"
+blue = "#89B4FA"
+green = "#A6E3A1"
+cyan = "#94E2D5"
+red = "#F38BA8"
+magenta = "#F5C2E7"
+brown = "#F9E2AF"
+light_gray = "#BAC2DE"
 
-black = "..."
-magenta = "..."
-white = "..."
-bright_black = "..."
-bright_red = "..."
-bright_green = "..."
-bright_yellow = "..."
-bright_blue = "..."
-bright_magenta = "..."
-bright_cyan = "..."
-bright_white = "..."
+dark_gray = "#6C7086"
+light_blue = "#89B4FA"
+light_green = "#A6E3A1"
+light_cyan = "#94E2D5"
+light_red = "#F38BA8"
+light_magenta = "#CBA6F7"
+light_yellow = "#F9E2AF"
+white = "#CDD6F4"
+
+# ------ Extended Palette
+orange = "#FAB387"
+pink = "#f5c2e7"
