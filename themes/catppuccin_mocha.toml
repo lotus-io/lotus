@@ -1,0 +1,58 @@
+name = "Catppuccin Mocha"
+author = "Pocco"
+version = 1
+description = "A dark theme with warm pastel colors."
+
+[colors]
+// ------ Base
+fg = "#CDD6F4";
+bg = "#1E1E2E";
+
+// ------ Surfaces
+surface = "#313244";
+surface_2 = "#45475A";
+
+// ------ Text
+text = "#CDD6F4";
+muted = "#6C7086";
+subtle = "#585B70";
+disabled = "#6C7086";
+
+// ------ UI
+border = "#6C7086";
+selection_fg = "#CDD6F4"
+selection_bg = "#45475A"
+highlight_fg = "#1E1E2E"
+highlight_bg = "#CBA6F7"
+accent = "#CBA6F7";
+
+// ------ Semantic
+success = "#A6E3A1";
+warning = "#F9E2AF";
+error = "#F38BA8";
+info = "#89DCEB";
+
+// ------ Links
+link = "#89B4FA";
+
+// ------ Palette
+red = "#F38BA8";
+orange = "#FAB387";
+yellow = "#F9E2AF";
+green = "#A6E3A1";
+cyan = "#94E2D5";
+blue = "#89B4FA";
+purple = "#CBA6F7";
+pink = "#F5C2E7";
+
+black = "..."
+magenta = "..."
+white = "..."
+bright_black = "..."
+bright_red = "..."
+bright_green = "..."
+bright_yellow = "..."
+bright_blue = "..."
+bright_magenta = "..."
+bright_cyan = "..."
+bright_white = "..."
