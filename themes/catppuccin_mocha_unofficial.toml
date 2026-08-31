@@ -1,0 +1,59 @@
+name = "Catppuccin Mocha Unofficial"
+author = "Pocco"
+version = 1
+description = "An unofficial Catppuccin Mocha adaptation for TUI applications."
+
+[colors]
+// ------ Base
+fg = "#CDD6F4";
+bg = "#1E1E2E";
+
+// ------ Surfaces
+surface = "#313244";
+surface_2 = "#45475A";
+
+// ------ Text
+text = "#CDD6F4";
+muted = "#6C7086";
+subtle = "#585B70";
+disabled = "#6C7086";
+
+// ------ UI
+border = "#6C7086";
+selection_fg = "#CDD6F4"
+selection_bg = "#45475A"
+highlight_fg = "#1E1E2E"
+highlight_bg = "#CBA6F7"
+accent = "#CBA6F7";
+
+// ------ Semantic
+success = "#A6E3A1";
+warning = "#F9E2AF";
+error = "#F38BA8";
+info = "#89DCEB";
+
+// ------ Links
+link = "#89B4FA";
+
+# ------ ANSI Palette
+black = "#45475A"
+blue = "#89B4FA"
+green = "#A6E3A1"
+cyan = "#94E2D5"
+red = "#F38BA8"
+magenta = "#F5C2E7"
+brown = "#F9E2AF" // dark_yellow
+light_gray = "#BAC2DE"
+
+dark_gray = "#6C7086"
+light_blue = "#89B4FA"
+light_green = "#A6E3A1"
+light_cyan = "#94E2D5"
+light_red = "#F38BA8"
+light_magenta = "#CBA6F7"
+yellow = "#F9E2AF" // light_yellow
+white = "#CDD6F4"
+
+# ------ Extended Palette
+orange = "#FAB387"
+pink = "#f5c2e7"
