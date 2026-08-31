@@ -196,14 +196,28 @@ where
         .ok_or_else(|| serde::de::Error::custom(format!("invalid hex color: {raw:?}")))
 }
 
-fn parse_theme_toml(raw: &str) -> Result<Theme, toml::de::Error> {
+fn toml_theme_parser(raw: &str) -> Result<Theme, toml::de::Error> {
     toml::from_str(raw)
 }
 
-fn themes_dir() -> Option<std::path::PathBuf> {
+fn config_dir() -> Option<std::path::PathBuf> {
     let home = std::env::var_os("HOME")?;
-    Some(std::path::PathBuf::from(home).join(".config/lotus/themes"))
+
+    Some(
+        std::path::PathBuf::from(home)
+            .join(".config")
+            .join("lotus"),
+    )
 }
+
+fn themes_dir() -> Option<std::path::PathBuf> {
+    Some(config_dir()?.join("themes"))
+}
+
+fn current_theme_path() -> Option<std::path::PathBuf> {
+    Some(config_dir()?.join("current-theme"))
+}
+
 
 fn load_themes() -> Vec<Theme> {
     let Some(dir) = themes_dir() else {
@@ -216,18 +230,33 @@ fn load_themes() -> Vec<Theme> {
 
     entries
         .filter_map(Result::ok)
-        .filter(|entry| entry.path().extension().is_some_and(|ext| ext == "toml"))
-        .filter_map(|entry| match std::fs::read_to_string(entry.path()) {
-            Ok(raw) => match parse_theme_toml(&raw) {
-                Ok(theme) => Some(theme),
+        .filter(|entry| {
+            entry
+                .path()
+                .extension()
+                .is_some_and(|ext| ext == "toml")
+        })
+        .filter_map(|entry| {
+            let path = entry.path();
+
+            match std::fs::read_to_string(&path) {
+                Ok(raw) => match toml_theme_parser(&raw) {
+                    Ok(theme) => Some(theme),
+                    Err(err) => {
+                        eprintln!(
+                            "Failed to parse theme {}: {err}",
+                            path.display()
+                        );
+                        None
+                    }
+                },
                 Err(err) => {
-                    eprintln!("Failed to parse theme {}: {err}", entry.path().display());
+                    eprintln!(
+                        "Failed to read theme {}: {err}",
+                        path.display()
+                    );
                     None
                 }
-            },
-            Err(err) => {
-                eprintln!("Failed to read theme {}: {err}", entry.path().display());
-                None
             }
         })
         .collect()
@@ -245,9 +274,63 @@ pub fn discover_themes() -> Vec<Theme> {
     themes
 }
 
-pub fn list_themes() {}
+pub fn list_themes() {
+    let themes = discover_themes();
 
-pub fn get_current_theme() {}
+    for theme in themes {
+        println!("{} — {}", theme.name, theme.author);
+    }
+}
 
-pub fn set_current_theme() {}
+pub fn get_current_theme() -> Theme {
+    let themes = discover_themes();
+
+    let Some(path) = current_theme_path() else {
+        return themes
+            .first()
+            .cloned()
+            .unwrap_or_else(Theme::fallback);
+    };
+
+    let Ok(name) = std::fs::read_to_string(&path) else {
+        return themes
+            .first()
+            .cloned()
+            .unwrap_or_else(Theme::fallback);
+    };
+
+    let name = name.trim();
+
+    themes
+        .into_iter()
+        .find(|theme| theme.name == name)
+        .unwrap_or_else(Theme::fallback)
+}
+
+pub fn set_current_theme(name: &str) -> Result<(), Box<dyn std::error::Error>> {
+    let name = name.trim();
+
+    if name.is_empty() {
+        return Err("theme name cannot be empty".into());
+    }
+
+    let themes = discover_themes();
+
+    let theme_exists = themes.iter().any(|theme| theme.name == name);
+
+    if !theme_exists {
+        return Err(format!("theme not found: {name}").into());
+    }
+
+    let config_dir = config_dir()
+        .ok_or("could not determine config directory")?;
+
+    std::fs::create_dir_all(&config_dir)?;
+
+    let path = config_dir.join("current-theme");
+
+    std::fs::write(path, format!("{name}\n"))?;
+
+    Ok(())
+}
 ```
