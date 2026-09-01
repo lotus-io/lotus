@@ -36,20 +36,20 @@ info = "#89DCEB"; # sky
 link = "#89B4FA"; # blue
 
 # ------ ANSI Palette
-black = "#45475A"
-blue = "#89B4FA"
-green = "#A6E3A1"
-cyan = "#94E2D5"
-red = "#F38BA8"
-magenta = "#F5C2E7"
-brown = "#F9E2AF" # dark_yellow
-light_gray = "#BAC2DE"
+black = "#1E1E2E" # base
+blue = "#667FA8" # new
+green = "#769C72" # new
+cyan = "#6D9E99" # new
+red = "#B4546A" # new
+magenta = "#9B78B8" # new
+brown = "#B39A68" # new
+light_gray = "#A6ADC8" # subtext_0
 
-dark_gray = "#6C7086"
-light_blue = "#89B4FA"
-light_green = "#A6E3A1"
-light_cyan = "#94E2D5"
-light_red = "#F38BA8"
-light_magenta = "#CBA6F7"
-yellow = "#F9E2AF" # light_yellow
-white = "#CDD6F4"
+dark_gray = "#6C7086" # overlay_0
+light_blue = "#89B4FA" # blue
+light_green = "#A6E3A1" # green
+light_cyan = "#94E2D5" # teal
+light_red = "#F38BA8" # red
+light_magenta = "#CBA6F7" # mauve
+yellow = "#F9E2AF" # yellow
+white = "#CDD6F4" # text
