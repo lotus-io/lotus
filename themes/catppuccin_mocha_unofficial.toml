@@ -4,35 +4,36 @@ description = "An unofficial Catppuccin Mocha adaptation for TUI applications."
 
 [colors]
 # ------ Base
-fg = "#CDD6F4";
-bg = "#1E1E2E";
+text = "#CDD6F4"; # text
+base = "#1E1E2E"; # base
 
 # ------ Surfaces
-surface = "#313244";
-surface_2 = "#45475A";
+surface_0 = "#313244"; # bg_2
+surface_1 = "#45475A"; # bg_3
 
 # ------ Text
-text = "#CDD6F4";
-muted = "#6C7086";
-subtle = "#585B70";
-disabled = "#6C7086";
+muted = "#6C7086"; # overlay_0
+subtle = "#585B70"; # surface_2
+disabled = "#6C7086"; # overlay_0
 
 # ------ UI
-border = "#6C7086";
-selection_fg = "#CDD6F4"
-selection_bg = "#45475A"
-highlight_fg = "#1E1E2E"
-highlight_bg = "#CBA6F7"
-accent = "#CBA6F7";
+border = "#6C7086"; # overlay_0
+
+# ------ Accents
+accent = "#CBA6F7"; # mauve
+accent_2 = "#89B4FA"; # blue
+accent_3 = "#FAB387"; # peach
+accent_4 = "#A6E3A1"; # green
+accent_5 = "#F5C2E7"; # pink
 
 # ------ Semantic
-success = "#A6E3A1";
-warning = "#F9E2AF";
-error = "#F38BA8";
-info = "#89DCEB";
+success = "#A6E3A1"; # green
+warning = "#F9E2AF"; # yellow
+error = "#F38BA8"; # red
+info = "#89DCEB"; # sky
 
 # ------ Links
-link = "#89B4FA";
+link = "#89B4FA"; # blue
 
 # ------ ANSI Palette
 black = "#45475A"
@@ -52,7 +53,3 @@ light_red = "#F38BA8"
 light_magenta = "#CBA6F7"
 yellow = "#F9E2AF" # light_yellow
 white = "#CDD6F4"
-
-# ------ Extended Palette
-orange = "#FAB387"
-pink = "#f5c2e7"
