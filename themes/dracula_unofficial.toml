@@ -1,0 +1,55 @@
+name = "Dracula Unofficial"
+author = "Zeno Rocha"
+description = "An unofficial Dracula adaptation for TUI applications."
+
+[colors]
+# ------ Base
+text = "#F8F8F2" # foreground
+base = "#282A36" # background
+
+# ------ Surfaces
+surface_0 = "#44475A" # current line / selection
+surface_1 = "#6272A4" # comment / secondary surface
+
+# ------ Text
+muted = "#6272A4" # comment
+subtle = "#44475A" # current line
+disabled = "#6272A4" # comment
+
+# ------ UI
+border = "#6272A4" # comment
+
+# ------ Accents
+accent = "#BD93F9" # purple
+accent_2 = "#8BE9FD" # cyan
+accent_3 = "#FFB86C" # orange
+accent_4 = "#50FA7B" # green
+accent_5 = "#FF79C6" # pink
+
+# ------ Semantic
+success = "#50FA7B" # green
+warning = "#F1FA8C" # yellow
+error = "#FF5555" # red
+info = "#8BE9FD" # cyan
+
+# ------ Links
+link = "#8BE9FD" # cyan
+
+# ------ ANSI Palette
+black = "#282A36" # background
+blue = "#6272A4" # comment
+green = "#3FAF63" # subdued green
+cyan = "#5FB3C8" # subdued cyan
+red = "#D64545" # subdued red
+magenta = "#C05A9E" # subdued pink
+brown = "#D99A5E" # subdued orange
+light_gray = "#B9BBC6" # subdued foreground
+
+dark_gray = "#44475A" # current line
+light_blue = "#8BE9FD" # cyan
+light_green = "#50FA7B" # green
+light_cyan = "#8BE9FD" # cyan
+light_red = "#FF5555" # red
+light_magenta = "#FF79C6" # pink
+yellow = "#F1FA8C" # yellow
+white = "#F8F8F2" # foreground

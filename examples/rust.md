@@ -9,11 +9,12 @@ In this scenario we are assuming you have a folder structure that looks like thi
 ├── src
 │   ├── app.rs
 │   ├── main.rs
-│   ├── theme.rs
-│   └── ui
+│   └── theme.rs
 ```
 
-Another thing we are assuming in this scenario is that you are going to need all the colors, when in reality most people can stick to using only semantic colors (like fg, bg, ...) if you do have illustrations this is where you would like to have something like a palette.
+The theme format provides both semantic colors and a complete ANSI-style palette. You generally do not need to use every color in your application.
+
+For most TUI applications, semantic colors such as `text`, `base`, `border`, `accent`, `success`, `warning`, `error`, and `info` are enough. The additional accent and ANSI palette colors are useful when an application needs more visual variety, such as for syntax highlighting, charts, illustrations, or other multi-color UI elements.
 
 ## Getting themes
 
@@ -47,126 +48,164 @@ pub struct Theme {
 #[derive(Debug, Clone, Deserialize)]
 pub struct ThemeColors {
     #[serde(deserialize_with = "deserialize_color")]
-    pub fg: Color,
-    #[serde(deserialize_with = "deserialize_color")]
-    pub bg: Color,
-    #[serde(deserialize_with = "deserialize_color")]
-    pub surface: Color,
-    #[serde(deserialize_with = "deserialize_color")]
-    pub surface_2: Color,
-    #[serde(deserialize_with = "deserialize_color")]
     pub text: Color,
+
+    #[serde(deserialize_with = "deserialize_color")]
+    pub base: Color,
+
+    #[serde(deserialize_with = "deserialize_color")]
+    pub surface_0: Color,
+
+    #[serde(deserialize_with = "deserialize_color")]
+    pub surface_1: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub muted: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub subtle: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub disabled: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub border: Color,
-    #[serde(deserialize_with = "deserialize_color")]
-    pub selection_fg: Color,
-    #[serde(deserialize_with = "deserialize_color")]
-    pub selection_bg: Color,
-    #[serde(deserialize_with = "deserialize_color")]
-    pub highlight_fg: Color,
-    #[serde(deserialize_with = "deserialize_color")]
-    pub highlight_bg: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub accent: Color,
+
+    #[serde(deserialize_with = "deserialize_color")]
+    pub accent_2: Color,
+
+    #[serde(deserialize_with = "deserialize_color")]
+    pub accent_3: Color,
+
+    #[serde(deserialize_with = "deserialize_color")]
+    pub accent_4: Color,
+
+    #[serde(deserialize_with = "deserialize_color")]
+    pub accent_5: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub success: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub warning: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub error: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub info: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub link: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub black: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub blue: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub green: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub cyan: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub red: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub magenta: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub brown: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub light_gray: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub dark_gray: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub light_blue: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub light_green: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub light_cyan: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub light_red: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub light_magenta: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub yellow: Color,
+
     #[serde(deserialize_with = "deserialize_color")]
     pub white: Color,
-    #[serde(deserialize_with = "deserialize_color")]
-    pub orange: Color,
-    #[serde(deserialize_with = "deserialize_color")]
-    pub pink: Color,
 }
 
 impl Theme {
     pub fn fallback() -> Self {
         Self {
-            name: format!("{}", env!("CARGO_PKG_NAME")).to_string(),
-            author: format!("{}", env!("CARGO_PKG_VERSION")).to_string(),
-            version: 1,
+            name: env!("CARGO_PKG_NAME").to_string(),
+            author: env!("CARGO_PKG_AUTHORS").to_string(),
+            description: "Built-in fallback theme.".to_string(),
             colors: ThemeColors {
-                // here your local theme so you can use it as a fallback
-                fg: Color::Black,
-                bg: Color::Black,
-                surface: Color::Black,
-                surface_2: Color::Black,
-                text: Color::Black,
-                muted: Color::Black,
-                subtle: Color::Black,
-                disabled: Color::Black,
-                border: Color::Black,
-                selection_fg: Color::Black,
-                selection_bg: Color::Black,
-                highlight_fg: Color::Black,
-                highlight_bg: Color::Black,
-                accent: Color::Black,
-                success: Color::Black,
-                warning: Color::Black,
-                error: Color::Black,
-                info: Color::Black,
-                link: Color::Black,
+                // Base
+                text: Color::White,
+                base: Color::Black,
+
+                // Surfaces
+                surface_0: Color::DarkGray,
+                surface_1: Color::Gray,
+
+                // Text
+                muted: Color::DarkGray,
+                subtle: Color::DarkGray,
+                disabled: Color::DarkGray,
+
+                // UI
+                border: Color::DarkGray,
+
+                // Accents
+                accent: Color::Magenta,
+                accent_2: Color::Blue,
+                accent_3: Color::Yellow,
+                accent_4: Color::Green,
+                accent_5: Color::Magenta,
+
+                // Semantic
+                success: Color::Green,
+                warning: Color::Yellow,
+                error: Color::Red,
+                info: Color::Cyan,
+
+                // Links
+                link: Color::Blue,
+
+                // ANSI palette
                 black: Color::Black,
-                blue: Color::Black,
-                green: Color::Black,
-                cyan: Color::Black,
-                red: Color::Black,
-                magenta: Color::Black,
-                brown: Color::Black,
-                light_gray: Color::Black,
-                dark_gray: Color::Black,
-                light_blue: Color::Black,
-                light_green: Color::Black,
-                light_cyan: Color::Black,
-                light_red: Color::Black,
-                light_magenta: Color::Black,
-                yellow: Color::Black,
-                white: Color::Black,
-                orange: Color::Black,
-                pink: Color::Black,
+                blue: Color::Blue,
+                green: Color::Green,
+                cyan: Color::Cyan,
+                red: Color::Red,
+                magenta: Color::Magenta,
+                brown: Color::Yellow,
+                light_gray: Color::Gray,
+                dark_gray: Color::DarkGray,
+                light_blue: Color::LightBlue,
+                light_green: Color::LightGreen,
+                light_cyan: Color::LightCyan,
+                light_red: Color::LightRed,
+                light_magenta: Color::LightMagenta,
+                yellow: Color::Yellow,
+                white: Color::White,
             },
         }
     }
@@ -334,3 +373,5 @@ pub fn set_current_theme(name: &str) -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 ```
+
+then you would just add those in your `src/app.rs`
