@@ -1,59 +1,54 @@
 name = "Catppuccin Mocha Unofficial"
 author = "Pocco"
-version = 1
 description = "An unofficial Catppuccin Mocha adaptation for TUI applications."
 
 [colors]
-// ------ Base
-fg = "#CDD6F4";
-bg = "#1E1E2E";
+# ------ Base
+text = "#CDD6F4" # text
+base = "#1E1E2E" # base
 
-// ------ Surfaces
-surface = "#313244";
-surface_2 = "#45475A";
+# ------ Surfaces
+surface_0 = "#313244" # bg_2
+surface_1 = "#45475A" # bg_3
 
-// ------ Text
-text = "#CDD6F4";
-muted = "#6C7086";
-subtle = "#585B70";
-disabled = "#6C7086";
+# ------ Text
+subtle = "#585B70" # surface_2
+disabled = "#6C7086" # overlay_0
 
-// ------ UI
-border = "#6C7086";
-selection_fg = "#CDD6F4"
-selection_bg = "#45475A"
-highlight_fg = "#1E1E2E"
-highlight_bg = "#CBA6F7"
-accent = "#CBA6F7";
+# ------ UI
+border = "#6C7086" # overlay_0
 
-// ------ Semantic
-success = "#A6E3A1";
-warning = "#F9E2AF";
-error = "#F38BA8";
-info = "#89DCEB";
+# ------ Accents
+accent = "#CBA6F7" # mauve
+accent_2 = "#89B4FA" # blue
+accent_3 = "#FAB387" # peach
+accent_4 = "#A6E3A1" # green
+accent_5 = "#F5C2E7" # pink
 
-// ------ Links
-link = "#89B4FA";
+# ------ Semantic
+success = "#A6E3A1" # green
+warning = "#F9E2AF" # yellow
+error = "#F38BA8" # red
+info = "#89DCEB" # sky
+
+# ------ Links
+link = "#89B4FA" # blue
 
 # ------ ANSI Palette
-black = "#45475A"
-blue = "#89B4FA"
-green = "#A6E3A1"
-cyan = "#94E2D5"
-red = "#F38BA8"
-magenta = "#F5C2E7"
-brown = "#F9E2AF" // dark_yellow
-light_gray = "#BAC2DE"
+black = "#1E1E2E" # base
+blue = "#667FA8" # new
+green = "#769C72" # new
+cyan = "#6D9E99" # new
+red = "#B4546A" # new
+magenta = "#9B78B8" # new
+brown = "#B39A68" # new
+light_gray = "#A6ADC8" # subtext_0
 
-dark_gray = "#6C7086"
-light_blue = "#89B4FA"
-light_green = "#A6E3A1"
-light_cyan = "#94E2D5"
-light_red = "#F38BA8"
-light_magenta = "#CBA6F7"
-yellow = "#F9E2AF" // light_yellow
-white = "#CDD6F4"
-
-# ------ Extended Palette
-orange = "#FAB387"
-pink = "#f5c2e7"
+dark_gray = "#6C7086" # overlay_0
+light_blue = "#89B4FA" # blue
+light_green = "#A6E3A1" # green
+light_cyan = "#94E2D5" # teal
+light_red = "#F38BA8" # red
+light_magenta = "#CBA6F7" # mauve
+yellow = "#F9E2AF" # yellow
+white = "#CDD6F4" # text

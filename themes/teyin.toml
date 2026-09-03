@@ -1,0 +1,54 @@
+name = "Teyin"
+author = "Isotjs"
+description = "A dark teal terminal theme."
+
+[colors]
+# ------ Base
+text = "#EAE6DE"
+base = "#0E181A"
+
+# ------ Surfaces
+surface_0 = "#162A2E"
+surface_1 = "#1E383D"
+
+# ------ Text
+subtle = "#7A9495"
+disabled = "#5D7A7C"
+
+# ------ UI
+border = "#28484D"
+
+# ------ Accents
+accent = "#D4AF37"
+accent_2 = "#6A9FCE"
+accent_3 = "#4DA8AC"
+accent_4 = "#3A9DA0"
+accent_5 = "#C77D4D"
+
+# ------ Semantic
+success = "#3A9DA0"
+warning = "#D4AF37"
+error = "#B83A2D"
+info = "#6A9FCE"
+
+# ------ Links
+link = "#6A9FCF"
+
+# ------ ANSI Palette
+black = "#0E181A"
+blue = "#4A7595"
+green = "#3F7268"
+cyan = "#4DA8AC"
+red = "#B83A2D"
+magenta = "#8a6387"
+brown = "#A8793E"
+light_gray = "#9B9D96"
+
+dark_gray = "#26383A"
+light_blue = "#6A9FCE"
+light_green = "#6AA58F"
+light_cyan = "#6BC1C4"
+light_red = "#D05B4D"
+light_magenta = "#ae7ab4"
+yellow = "#D4AF37"
+white = "#EAE6DE"
