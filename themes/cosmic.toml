@@ -19,11 +19,11 @@ disabled = "#6E6580"
 border = "#6C489B"
 
 # ------ Accents
-accent = "#B78ED7"
+accent = "#EC7CA7"
 accent_2 = "#E081D8"
-accent_3 = "#EC7CA7"
-accent_4 = "#B7AFD1"
-accent_5 = "#E081D8"
+accent_3 = "#B78ED7"
+accent_4 = "#E081D8"
+accent_5 = "#B7AFD1"
 
 # ------ Semantic
 success = "#B7AFD1"
