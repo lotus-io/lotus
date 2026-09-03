@@ -19,8 +19,8 @@ disabled = "#808080"
 border = "#808080"
 
 # ------ Accents
-accent = "#800080"
-accent_2 = "#00FFFF"
+accent = "#00FFFF"
+accent_2 = "#800080"
 accent_3 = "#FFFF00"
 accent_4 = "#00FF00"
 accent_5 = "#FF00FF"

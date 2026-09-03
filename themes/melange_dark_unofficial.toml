@@ -1,0 +1,54 @@
+name = "Mélange Dark Unofficial"
+author = "Savq"
+description = "A warm, earthy terminal theme inspired by Mélange Dark."
+
+[colors]
+# ------ Base
+text = "#ECE1D7"
+base = "#161413"
+
+# ------ Surfaces
+surface_0 = "#221C18"
+surface_1 = "#322B24"
+
+# ------ Text
+subtle = "#867462"
+disabled = "#66594D"
+
+# ------ UI
+border = "#4D463E"
+
+# ------ Accents
+accent = "#EBC06E"
+accent_2 = "#78997A"
+accent_3 = "#E49B5D"
+accent_4 = "#8CBBA1"
+accent_5 = "#DAB148"
+
+# ------ Semantic
+success = "#85B695"
+warning = "#EBC06E"
+error = "#B65C60"
+info = "#8CBBA1"
+
+# ------ Links
+link = "#8CBBA3"
+
+# ------ ANSI Palette
+black = "#161413"
+blue = "#667D91"
+green = "#78997A"
+cyan = "#6F9A91"
+red = "#A85659"
+magenta = "#946b94"
+brown = "#A4774B"
+light_gray = "#9B9086"
+
+dark_gray = "#322B24"
+light_blue = "#8AABC0"
+light_green = "#85B695"
+light_cyan = "#8CBBA1"
+light_red = "#C87576"
+light_magenta = "#b084af"
+yellow = "#EBC06E"
+white = "#ECE1D7"

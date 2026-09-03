@@ -1,0 +1,54 @@
+name = "Tokyo Night Unofficial"
+author = "Enkia"
+description = "A Tokyo Night adaptation for TUI applications."
+
+[colors]
+# ------ Base
+text = "#C0CAF5"
+base = "#1A1B26"
+
+# ------ Surfaces
+surface_0 = "#24283B"
+surface_1 = "#2E324D"
+
+# ------ Text
+subtle = "#565F89"
+disabled = "#3B4261"
+
+# ------ UI
+border = "#2E324D"
+
+# ------ Accents
+accent = "#7AA2F7"
+accent_2 = "#64A0D2"
+accent_3 = "#FF9E64"
+accent_4 = "#9ECE6A"
+accent_5 = "#BB9AF7"
+
+# ------ Semantic
+success = "#9ECE6A"
+warning = "#FF9E64"
+error = "#F7768E"
+info = "#7DCFFF"
+
+# ------ Links
+link = "#7AA2F7"
+
+# ------ ANSI Palette
+black = "#1A1B26"
+blue = "#3D59A1"
+green = "#449C5B"
+cyan = "#2D8A9A"
+red = "#B83A4B"
+magenta = "#914C9C"
+brown = "#B06B3A"
+light_gray = "#737DA0"
+
+dark_gray = "#3B4261"
+light_blue = "#7AA2F7"
+light_green = "#9ECE6A"
+light_cyan = "#7DCFFF"
+light_red = "#F7768E"
+light_magenta = "#BB9AF7"
+yellow = "#E0AF68"
+white = "#C0CAF5"

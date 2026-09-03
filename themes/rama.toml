@@ -1,0 +1,54 @@
+name = "Rama"
+author = "Pombo"
+description = "A forest theme."
+
+[colors]
+# ------ Base
+text = "#CBDECD"
+base = "#0E190E"
+
+# ------ Surfaces
+surface_0 = "#2D3B24"
+surface_1 = "#3A4D2E"
+
+# ------ Text
+subtle = "#4D7A4E"
+disabled = "#3A4D2E"
+
+# ------ UI
+border = "#3A4D2E"
+
+# ------ Accents
+accent = "#45995A"
+accent_2 = "#7CCF8E"
+accent_3 = "#DCD07C"
+accent_4 = "#ABD68D"
+accent_5 = "#8DE285"
+
+# ------ Semantic
+success = "#ABD68D"
+warning = "#DCD07C"
+error = "#DC6364"
+info = "#7CCF8E"
+
+# ------ Links
+link = "#7CCF8E"
+
+# ------ ANSI Palette
+black = "#0E190E"
+blue = "#4D6F7A"
+green = "#45995A"
+cyan = "#4F8F82"
+red = "#B65354"
+magenta = "#8A5F82"
+brown = "#9A8350"
+light_gray = "#b5b9b5"
+
+dark_gray = "#1F2920"
+light_blue = "#6D9EAD"
+light_green = "#7CCF8E"
+light_cyan = "#72C4B3"
+light_red = "#DC6364"
+light_magenta = "#B77AA9"
+yellow = "#DCD07C"
+white = "#CBDECD"
