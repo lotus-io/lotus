@@ -1,0 +1,54 @@
+name = "Cosmic"
+author = "Pombo"
+description = "A Pomboverso theme for TUI applications."
+
+[colors]
+# ------ Base
+text = "#ECE3F6"
+base = "#2E2C42"
+
+# ------ Surfaces
+surface_0 = "#342A44"
+surface_1 = "#6E6580"
+
+# ------ Text
+subtle = "#6C489B"
+disabled = "#6E6580"
+
+# ------ UI
+border = "#6C489B"
+
+# ------ Accents
+accent = "#B78ED7"
+accent_2 = "#E081D8"
+accent_3 = "#EC7CA7"
+accent_4 = "#B7AFD1"
+accent_5 = "#E081D8"
+
+# ------ Semantic
+success = "#B7AFD1"
+warning = "#EC7CA7"
+error = "#E081D8"
+info = "#B78ED7"
+
+# ------ Links
+link = "#B78ED7"
+
+# ------ ANSI Palette
+black = "#2E2C42"
+blue = "#5861a6"
+green = "#769C72"
+cyan = "#6D9E99"
+red = "#C05F7D"
+magenta = "#B05AAB"
+brown = "#ca9662"
+light_gray = "#A6A0B5"
+
+dark_gray = "#3A354D"
+light_blue = "#7b8dc4"
+light_green = "#9FBD8F"
+light_cyan = "#8FC9C0"
+light_red = "#E081A0"
+light_magenta = "#D27ACB"
+yellow = "#D4B76A"
+white = "#ECE3F6"

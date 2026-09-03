@@ -1,0 +1,54 @@
+name = "TTY"
+author = "Pombo"
+description = "A TTY theme for old terminals."
+
+[colors]
+# ------ Base
+text = "#FFFFFF"
+base = "#000000"
+
+# ------ Surfaces
+surface_0 = "#808080"
+surface_1 = "#C0C0C0"
+
+# ------ Text
+subtle = "#808080"
+disabled = "#808080"
+
+# ------ UI
+border = "#808080"
+
+# ------ Accents
+accent = "#800080"
+accent_2 = "#00FFFF"
+accent_3 = "#FFFF00"
+accent_4 = "#00FF00"
+accent_5 = "#FF00FF"
+
+# ------ Semantic
+success = "#00FF00"
+warning = "#FFFF00"
+error = "#FF0000"
+info = "#00FFFF"
+
+# ------ Links
+link = "#00FFFF"
+
+# ------ ANSI Palette
+black = "#000000"
+blue = "#0000AA"
+green = "#00AA00"
+cyan = "#00AAAA"
+red = "#AA0000"
+magenta = "#AA00AA"
+brown = "#AA5500"
+light_gray = "#AAAAAA"
+
+dark_gray = "#555555"
+light_blue = "#5555FF"
+light_green = "#55FF55"
+light_cyan = "#55FFFF"
+light_red = "#FF5555"
+light_magenta = "#FF55FF"
+yellow = "#FFFF55"
+white = "#FFFFFF"
